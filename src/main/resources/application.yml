@@ -1,0 +1,27 @@
+# Docs API配置
+springdoc:
+  swagger-ui:
+    # API文档, 默认路径:swagger-ui/index.html, 通过http://localhost:8080/docs/index.html访问
+    path: /docs/index.html
+    # 开启Swagger UI界面
+    enabled: true
+    # 根据HTTP方法对API路径进行排序
+    operations-sorter: method
+  api-docs:
+    # OpenAPI的路径描述，默认路径:/v3/api-docs, 通过http://localhost:8080/docs/api访问文档描述
+    # OpenAPI描述定义默认为JSON格式, 通过http://localhost:8080/docs/api.yaml获取yaml格式
+    path: /docs/api
+    # 开启api-docs
+    enabled: true
+  # 配置需要生成接口文档的扫描包路径
+  packages-to-scan: com
+  # 配置需要生成接口文档的接口路径
+  paths-to-match:  /test/**,/user/**
+  # knife4j的增强配置，不需要增强可以不配
+knife4j:
+  enable: true    #开启knife4j,无需添加@EnableKnife4j注解
+  setting:
+    language: zh_cn   #中文
+    swagger-model-name: 实体列表   #默认为：Swagger Models
+
+
