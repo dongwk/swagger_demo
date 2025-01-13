@@ -15,6 +15,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>swagger_demo_1</module>
+        <module>swagger_gateway_1</module>
     </modules>
 
 </project>
